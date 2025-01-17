@@ -10,11 +10,17 @@
     <h1>
         Hello World
     </h1>
+    
     <button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
 
-<p id="demo"></p>
+    <p id="demo"></p>
+
+    <script>
+    const x = (x, y) => x * y;
+    document.getElementById("demo").innerHTML = x(7, 9);
+    </script>
     
 </body>
 </html>
