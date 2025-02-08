@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Categories() {
   const products = [
     { id: 1, name: "Item One", stock: "Stock", price: "P12.30", category: "Clothing & Apparel", date: "2019/11/06" },
     { id: 2, name: "Item Two", stock: "Stock", price: "P1,234.99", category: "Computers & Technologies", date: "2018/7/11" },
@@ -61,7 +61,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/settings" className="text-white text-sm hover:text-zinc-300">
+            <Link href="/dash-settings" className="text-white text-sm hover:text-zinc-300">
               Settings
             </Link>
           </li>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-white text-2xl font-semibold">Products</h1>
+          <h1 className="text-white text-2xl font-semibold">CATEGORIES TESTING</h1>
           <div className="flex items-center">
             <input
               type="text"

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Customers() {
   const products = [
-    { id: 1, name: "Item One", stock: "Stock", price: "P12.30", category: "Clothing & Apparel", date: "2019/11/06" },
-    { id: 2, name: "Item Two", stock: "Stock", price: "P1,234.99", category: "Computers & Technologies", date: "2018/7/11" },
-    { id: 3, name: "Item Three", stock: "Stock", price: "P3.78", category: "Home Appliances", date: "2019/7/21" },
-    { id: 4, name: "Item Four", stock: "Out-of-stock", price: "P5.30", category: "Accessories", date: "2018/7/11" },
-    { id: 5, name: "Item Five", stock: "Out-of-stock", price: "P3.30", category: "Books & Office", date: "2019/7/21" },
-    { id: 6, name: "Item Six", stock: "Stock", price: "P92.39", category: "Clothing & Apparel", date: "2018/7/21" },
+    { id: 1, name: "Item One", phone: "09619081616", balances: "P12.30", totalorders: "10", createdat: "2019/11/06", status: "Active" },
+    { id: 2, name: "Item Two", phone: "09619081616", balances: "P1,234.99", totalorders: "10", createdat: "2018/7/11", status: "Active" },
+    { id: 3, name: "Item Three", phone: "09619081616", balances: "P3.78", totalorders: "10", createdat: "2019/7/21", status: "Block" },
+    { id: 4, name: "Item Four", phone: "09619081616", balances: "P5.30", totalorders: "10", createdat: "2018/7/11", status: "Active" },
+    { id: 5, name: "Item Five", phone: "09619081616", balances: "P3.30", totalorders: "10", createdat: "2019/7/21", status: "Block"},
+    { id: 6, name: "Item Six", phone: "09619081616", balances: "P92.39", totalorders: "10", createdat: "2018/7/21", status: "Active"},
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/settings" className="text-white text-sm hover:text-zinc-300">
+            <Link href="/dash-settings" className="text-white text-sm hover:text-zinc-300">
               Settings
             </Link>
           </li>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-white text-2xl font-semibold">Products</h1>
+          <h1 className="text-white text-2xl font-semibold">CUSTOMERS TESTING</h1>
           <div className="flex items-center">
             <input
               type="text"
@@ -95,10 +95,11 @@ export default function Home() {
             <tr>
               <th className="text-left p-2">ID</th>
               <th className="text-left p-2">Name</th>
-              <th className="text-left p-2">Stock</th>
-              <th className="text-left p-2">Price</th>
-              <th className="text-left p-2">Categories</th>
-              <th className="text-left p-2">Date</th>
+              <th className="text-left p-2">Phone Number</th>
+              <th className="text-left p-2">Balances</th>
+              <th className="text-left p-2">Total Orders</th>
+              <th className="text-left p-2">Created At</th>
+              <th className="text-left p-2">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -106,10 +107,11 @@ export default function Home() {
               <tr key={product.id} className="border-b border-zinc-600">
                 <td className="p-2">{product.id}</td>
                 <td className="p-2">{product.name}</td>
-                <td className="p-2">{product.stock}</td>
-                <td className="p-2">{product.price}</td>
-                <td className="p-2">{product.category}</td>
-                <td className="p-2">{product.date}</td>
+                <td className="p-2">{product.phone}</td>
+                <td className="p-2">{product.balances}</td>
+                <td className="p-2">{product.totalorders}</td>
+                <td className="p-2">{product.createdat}</td>
+                <td className="p-2">{product.status}</td>
               </tr>
             ))}
           </tbody>

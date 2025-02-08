@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Orders() {
   const products = [
-    { id: 1, name: "Item One", stock: "Stock", price: "P12.30", category: "Clothing & Apparel", date: "2019/11/06" },
-    { id: 2, name: "Item Two", stock: "Stock", price: "P1,234.99", category: "Computers & Technologies", date: "2018/7/11" },
-    { id: 3, name: "Item Three", stock: "Stock", price: "P3.78", category: "Home Appliances", date: "2019/7/21" },
-    { id: 4, name: "Item Four", stock: "Out-of-stock", price: "P5.30", category: "Accessories", date: "2018/7/11" },
-    { id: 5, name: "Item Five", stock: "Out-of-stock", price: "P3.30", category: "Books & Office", date: "2019/7/21" },
-    { id: 6, name: "Item Six", stock: "Stock", price: "P92.39", category: "Clothing & Apparel", date: "2018/7/21" },
+    { id: 1, total: "Item One", product: "Item One", payment: "P12.30", fullfilment: "Delivered", date: "2019/11/06" },
+    { id: 2, total: "Item Two", product: "Item Two", payment: "P1,234.99", fullfilment: "In Progress", date: "2018/7/11" },
+    { id: 3, total: "Item Three", product: "Item Three", payment: "P3.78", fullfilment: "Delivered", date: "2019/7/21" },
+    { id: 4, total: "Item Four", product: "Item Four", payment: "P5.30", fullfilment: "Delivered", date: "2018/7/11" },
+    { id: 5, total: "Item Five", product: "Item Five", payment: "P3.30", fullfilment: "Cancelled", date: "2019/7/21" },
+    { id: 6, total: "Item Six", product: "Item Six", payment: "P92.39", fullfilment: "Delivered", date: "2018/7/21" },
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/settings" className="text-white text-sm hover:text-zinc-300">
+            <Link href="/dash-settings" className="text-white text-sm hover:text-zinc-300">
               Settings
             </Link>
           </li>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-white text-2xl font-semibold">Products</h1>
+          <h1 className="text-white text-2xl font-semibold">ORDERS TESTING</h1>
           <div className="flex items-center">
             <input
               type="text"
@@ -94,22 +94,22 @@ export default function Home() {
           <thead>
             <tr>
               <th className="text-left p-2">ID</th>
-              <th className="text-left p-2">Name</th>
-              <th className="text-left p-2">Stock</th>
-              <th className="text-left p-2">Price</th>
-              <th className="text-left p-2">Categories</th>
               <th className="text-left p-2">Date</th>
+              <th className="text-left p-2">Product</th>
+              <th className="text-left p-2">Payment</th>
+              <th className="text-left p-2">Fullfilment</th>
+              <th className="text-left p-2">Total</th>
             </tr>
           </thead>
           <tbody>
             {products.map((product) => (
               <tr key={product.id} className="border-b border-zinc-600">
                 <td className="p-2">{product.id}</td>
-                <td className="p-2">{product.name}</td>
-                <td className="p-2">{product.stock}</td>
-                <td className="p-2">{product.price}</td>
-                <td className="p-2">{product.category}</td>
                 <td className="p-2">{product.date}</td>
+                <td className="p-2">{product.product}</td>
+                <td className="p-2">{product.payment}</td>
+                <td className="p-2">{product.fullfilment}</td>
+                <td className="p-2">{product.total}</td>
               </tr>
             ))}
           </tbody>

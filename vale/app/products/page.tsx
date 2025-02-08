@@ -61,7 +61,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/settings" className="text-white text-sm hover:text-zinc-300">
+            <Link href="/dash-settings" className="text-white text-sm hover:text-zinc-300">
               Settings
             </Link>
           </li>
